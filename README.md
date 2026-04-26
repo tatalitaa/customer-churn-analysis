@@ -77,6 +77,26 @@ Top factors influencing churn:
 - Investigate fiber optic service quality  
 
 ---
+## Sample Output
+
+### Confusion Matrix
+![Confusion Matrix](https://github.com/user-attachments/assets/e155da74-bae6-4508-a62f-a63b0994e211)
+
+The model is able to correctly classify a majority of customers, although some churn cases are still misclassified.
+
+---
+
+### ROC Curve
+![ROC Curve](https://github.com/user-attachments/assets/3c275430-31ce-4622-8c40-030a4d6b1a95)
+
+The ROC curve shows good model performance with a strong ability to distinguish between churn and non-churn customers.
+
+---
+
+### Feature Importance
+![Feature Importance](https://github.com/user-attachments/assets/9ac414e0-e918-48e6-bd0a-ebb9e57161d8)
+
+Contract type, tenure, and monthly charges are the most influential factors in predicting customer churn.
 
 ## Tools & Technologies
 - Python  
