@@ -1,93 +1,94 @@
-# Customer Churn Analysis
+# Customer Churn Analysis & Prediction
 
 ## Overview
-This project analyzes customer churn behavior in a telecom company using exploratory data analysis (EDA) and provides actionable business insights to improve customer retention.
+This project analyzes customer churn behavior in a telecom company and builds a machine learning model to predict customers at risk of leaving.
 
-Customer churn is a critical problem for subscription-based businesses, as losing customers directly impacts revenue. This analysis aims to understand the key drivers behind churn and translate them into strategic recommendations.
+Customer churn is a critical business problem because retaining existing customers is significantly more cost-effective than acquiring new ones. This project transforms raw data into actionable insights and predictive capabilities to support customer retention strategies.
 
-
+---
 
 ## Objectives
-- Identify key factors influencing customer churn
-- Perform exploratory data analysis (EDA)
-- Understand customer behavior patterns
-- Provide data-driven business recommendations
+- Identify key factors influencing customer churn  
+- Perform exploratory data analysis (EDA)  
+- Build a predictive model using machine learning  
+- Provide actionable business recommendations  
 
-
+---
 
 ## Dataset
-- Telco Customer Churn Dataset
-- Contains customer demographics, services, account information, and churn status
+- Telco Customer Churn Dataset (Kaggle)  
+- Includes:
+  - Customer demographics  
+  - Service subscriptions  
+  - Billing information  
+  - Churn status  
 
-
+---
 
 ## Data Preparation
-- Converted `TotalCharges` to numeric format
-- Removed missing values
-- Dropped irrelevant features (e.g., customerID)
-- Performed categorical encoding for analysis
+- Converted `TotalCharges` to numeric format  
+- Removed missing values  
+- Dropped irrelevant features (`customerID`)  
+- Created new feature: `tenure_group`  
+- Encoded categorical variables using one-hot encoding  
 
-
-## Exploratory Data Analysis
-
-Key analyses performed:
-- Churn distribution
-- Tenure vs churn
-- Monthly charges vs churn
-- Contract type vs churn
-- Tech support vs churn
-- Internet service vs churn
-
+---
 
 ## Key Insights
 
-- **Contract Type**
-  - Month-to-month contracts have the highest churn rate
-  - Long-term contracts significantly reduce churn
+- Customers with **tenure < 12 months** have the highest churn risk  
+- **Month-to-month contracts** significantly increase churn  
+- Higher **monthly charges** correlate with higher churn  
+- Customers without **tech support** are more likely to churn  
+- Fiber optic users show relatively higher churn  
 
-- **Tenure**
-  - Customers with shorter tenure are more likely to churn
-  - Early-stage customer experience is critical
+---
 
-- **Monthly Charges**
-  - Higher monthly charges correlate with higher churn
-  - Pricing perception plays an important role
+## Machine Learning Model
 
-- **Tech Support**
-  - Customers without tech support are more likely to churn
-  - Support services improve retention
+- Model: Random Forest Classifier  
+- Data split: 80% training, 20% testing  
+- Evaluation metrics:
+  - Accuracy  
+  - ROC AUC Score  
+  - Confusion Matrix  
 
-- **Internet Service**
-  - Fiber optic users show higher churn compared to DSL users
-  - Potential issue in service quality or expectations
+The model helps identify high-risk customers and key drivers of churn.
 
+---
 
+## Feature Importance
+
+Top factors influencing churn:
+- Contract type  
+- Tenure  
+- Monthly charges  
+- Tech support  
+- Internet service  
+
+---
 
 ## Business Recommendations
 
-Based on the analysis:
+- Promote long-term contracts with incentives  
+- Improve onboarding experience for new customers  
+- Optimize pricing strategy  
+- Enhance customer support services  
+- Investigate fiber optic service quality  
 
-1. **Promote Long-Term Contracts**
-   - Offer discounts or incentives for yearly subscriptions
-
-2. **Improve Customer Onboarding**
-   - Focus on early-stage engagement to reduce initial churn
-
-3. **Optimize Pricing Strategy**
-   - Align pricing with perceived value
-
-4. **Enhance Customer Support**
-   - Provide accessible and responsive tech support
-
-5. **Evaluate Service Quality**
-   - Investigate high churn in fiber optic customers
-
+---
 
 ## Tools & Technologies
-- Python
-- Pandas
-- NumPy
-- Seaborn
-- Matplotlib
-- Scikit-learn (optional modeling)
+- Python  
+- Pandas, NumPy  
+- Seaborn, Matplotlib  
+- Scikit-learn  
 
+---
+
+## How to Run
+
+1. Clone repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
